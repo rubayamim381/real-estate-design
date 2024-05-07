@@ -1,10 +1,5 @@
 <!-- header and grid -->
 <header class="hero-container">
-    <!-- header img -->
-    {{-- <div class="hero">
-        <img src="{{asset('images/main_page/hero.jpg')}}" alt="">
-    </div> --}}
-
     <!-- carousel-img -->
     <div class="header-carousel w-100">
         <div id="carouselExampleAutoplaying" class="carousel slide h-100" data-bs-ride="carousel">
@@ -23,10 +18,10 @@
                     <div class="carousel-text" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="2000"
                         data-aos-easing="ease-in-out">
                         <div class="w-100 m-auto">
-                            <h1 class="fw-bolder">
+                            <h1 class="cardo fw-bolder text-uppercase">
                                 Find the Best Home
                             </h1>
-                            <h2 class="fw-lighter">
+                            <h2 class="raleway fw-light">
                                 Move home hassle free 1
                             </h2>
                         </div>
@@ -123,18 +118,5 @@
             </nav>
         </div>
     </div>
-
-    <!-- header text -->
-    {{-- <div class="w-75 hero-txt p-2">
-        <h1 class="lato text-uppercase text-white fw-bold fs-1 lh-base">
-            Find the Best Home <br> Move home hassle free
-        </h1>
-        <p class="mt-3 text-white-50 open-sans">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Aperiam,
-            necessitatibus totam consequatur
-            ea dolores animi similique, nemo nisi earum sit quas voluptate, sapiente dolorem reprehenderit
-            quibusdam fugit iure. Mollitia, nihil!</p>
-        <button type="button" class="btn btn-danger rounded-0 text-uppercase col-4 mt-4">Find out more</button>
-    </div> --}}
 
 </header>

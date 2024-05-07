@@ -12,6 +12,7 @@
     {{-- niceadmin cdn --}}
     @include('layouts.partials.cdn')
     <link rel="stylesheet" href="{{ asset('style.css') }}">
+    @stack('custom_css')
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
@@ -36,6 +37,7 @@
     <script>
         AOS.init();
     </script>
+    @stack('custom_script')
     <script src="{{ asset('script.js') }}"></script>
 </body>
 

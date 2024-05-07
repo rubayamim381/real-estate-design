@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Roboto&display=swap&family=Cardo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Roboto&display=swap&family=Cardo&display=swap&family=Great+Vibes&display=swap&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 .lato {
     font-family: 'Lato';
+}
+
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .open-sans {
@@ -35,6 +47,10 @@
 .bg-dark-50 {
     opacity: 1;
     background-color: #484747;
+}
+
+.bg-transparent-50 {
+    background-color: #07070754;
 }
 
 .txt-sub-header {
@@ -159,13 +175,15 @@ button {
 }
 
 .header-carousel .carousel-text h1 {
-    font-size: 50px;
-    font-family: initial;
+    font-family: 'Cardo';
+    text-transform: uppercase;
+    font-weight: bolder;
     font-style: italic;
+    font-size: 50px;
 }
 
 .header-carousel .carousel-text h2 {
-    font-family: initial;
+    font-family: 'Railway';
     color: #cabdbd;
 }
 
@@ -184,6 +202,23 @@ button {
     object-fit: cover;
     object-position: left;
     height: calc(100% - 0px);
+}
+
+/* search-form */
+.search-form .form-select {
+    border-color: #0a5133;
+}
+
+.search-form .form-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+.form-select:disabled {
+    background-color: var(--bs-secondary-bg);
+    border-color: #afafaf !important;
+    color: #8b8282 !important;
 }
 
 /* single img from grid image */
@@ -307,6 +342,10 @@ button {
         height: 30rem;
         overflow-x: hidden;
         overflow-y: auto;
+    }
+
+    .hero-navbar .navbar .navbar-nav a:hover {
+        transform: none;
     }
 
     .hero-txt {

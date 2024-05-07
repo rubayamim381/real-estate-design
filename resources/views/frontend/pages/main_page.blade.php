@@ -1,60 +1,64 @@
 @extends('layouts.front_master')
 
 @section('content')
-    <div class="my-5 dd-collection">
+    <div class="my-10 dd-collection">
         <div class="container">
-            <div class="d-sm-flex justify-content-center gap-2">
-                <div class="dropdown mb-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><button class="dropdown-item" type="button">Action</button></li>
-                        <li><button class="dropdown-item" type="button">Another action</button></li>
-                        <li><button class="dropdown-item" type="button">Something else here</button></li>
-                    </ul>
-                </div>
-                <div class="dropdown mb-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><button class="dropdown-item" type="button">Action</button></li>
-                        <li><button class="dropdown-item" type="button">Another action</button></li>
-                        <li><button class="dropdown-item" type="button">Something else here</button></li>
-                    </ul>
-                </div>
-                <div class="dropdown mb-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><button class="dropdown-item" type="button">Action</button></li>
-                        <li><button class="dropdown-item" type="button">Another action</button></li>
-                        <li><button class="dropdown-item" type="button">Something else here</button></li>
-                    </ul>
-                </div>
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select Division</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                </div>
-
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select District</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                </div>
-                
+            <div class="text-center mb-4">
+                {{-- <h1 class="great-vibes-regular fst-italic fw-bold txt-sub-header text-capitalize">Search your dream property</h1> --}}
+                <h1 class="cardo fst-italic fw-bold txt-green text-uppercase">Search your dream property</h1>
             </div>
+
+            <form class="search-form" action="#" method="get">
+                <div class="d-sm-flex justify-content-center gap-2">
+                    <div class="mb-3">
+                        @php
+                            $divisions = [
+                                'Barishal',
+                                'Chattogram',
+                                'Dhaka',
+                                'Khulna',
+                                'Mymensingh',
+                                'Rajshahi',
+                                'Rangpur',
+                                'Sylhet',
+                            ];
+                        @endphp
+                        <select name="division" id="division" onchange="divisionsList();" class="form-select" aria-label="Default select example">
+                            <option disabled selected>Select Division</option>
+                            @foreach ($divisions as $div)
+                                <option value="{{ $div }}">{{ $div }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <select name="district" id="district" onchange="thanaList();" class="form-select" aria-label="Default select example" disabled>
+                            <option disabled selected>Select District</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <select name="sub_district" id="sub_district" class="form-select" aria-label="Default select example" disabled>
+                            <option disabled selected>Select City</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option disabled selected>Select Category</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <button class="btn btn-secondary" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
         </div>
-        
+
     </div>
 
     <div class="my-5">
@@ -108,3 +112,7 @@
         error quibusdam eius quos, molestiae quidem placeat exercitationem amet, mollitia nemo ullam dolore quo alias?
     </div>
 @endsection
+
+@push('custom_script')
+    @include('frontend.pages.includes.division_script')
+@endpush
